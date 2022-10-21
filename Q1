@@ -1,0 +1,33 @@
+from collections import defaultdict
+
+def freqSort (arr,n):
+
+ frq = defaultdict(int)
+
+ for e in arr:
+
+ frq [e]+=1
+
+ ans = [(e,frq[e]) for e in arr]
+
+ ans.sort()
+
+ ans.sort(key=lambda x:x[1],reverse = True)
+
+ for e in ans:
+
+ print(e[0],end='')
+
+if__name__ == '__main__'
+
+T = int(input())
+
+for_in range (T):
+
+ n = int(input())
+
+ arr=[int(r)for x in input().split()]
+
+ freqSort (arr,n)
+
+ print()
